@@ -21,26 +21,27 @@
   justify-content: center;
   align-items: center;
   color: var(--font-color-bright);
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 60px;
+    font-weight: 700;
+    gap: 20px;
+    text-align: center;
+    span {
+      font-size: 36px;
+      padding: 1rem 1.5rem;
+      border-radius: 20px;
+      color: white;
+      background-color: var(--main-color-bright);
+    }
+  }
+  p {
+    text-align: center;
+    line-height: 2rem;
+    font-size: 18px;
+  }
 }
-.about h2 {
-  margin-bottom: 1.5rem;
-  font-size: 60px;
-  font-weight: 700;
-  gap: 20px;
-  text-align: center;
-}
-.about h2 span {
-  font-size: 36px;
-  padding: 1rem 1.5rem;
-  border-radius: 20px;
-  color: white;
-  background-color: var(--main-color-bright);
-}
-.about p {
-  text-align: center;
-  line-height: 2rem;
-  font-size: 18px;
-}
+
 @media (min-width: 992px) {
   .about .container {
     width: 50%;

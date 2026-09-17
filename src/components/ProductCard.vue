@@ -21,37 +21,38 @@ export default {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  .image {
+    padding: 1rem 1rem 0px;
+    height: 12rem;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.75rem;
+      object-fit: cover;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 2rem 0px;
+    text-align: center;
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: inherit;
+    }
+    .price {
+      color: #463aa1;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+  }
 }
 .card:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.card .image {
-  padding: 1rem 1rem 0px;
-  height: 12rem;
-}
-.card img {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.75rem;
-  object-fit: cover;
-}
-.card .content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 2rem 2rem 0px;
-  text-align: center;
-}
-.card .content h4 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: inherit;
-}
-.card .content .price {
-  color: #463aa1;
-  text-align: center;
-  margin-bottom: 16px;
-}
+
 .linear-layout .card {
   display: flex;
   flex-direction: row;

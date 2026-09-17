@@ -75,4 +75,9 @@ nav {
     background-color: var(--main-color-bright);
   }
 }
+@media (max-width: 400px) {
+  nav .container .links .link {
+    font-size: 14px;
+  }
+}
 </style>

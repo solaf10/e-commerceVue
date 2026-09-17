@@ -42,4 +42,9 @@ header {
     }
   }
 }
+@media (max-width: 400px) {
+  header .contact p {
+    font-size: 14px;
+  }
+}
 </style>
