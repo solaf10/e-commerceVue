@@ -1,5 +1,5 @@
 <template>
-  <div className="card" key="{id}">
+  <div className="card" key="{id}" @click="$emit('tryEmit', title)">
     <div className="image">
       <img :src="image" :alt="title" />
     </div>
@@ -11,7 +11,21 @@
 </template>
 <script>
 export default {
-  props: ['image', 'title', 'price'],
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+      required: true,
+    },
+  },
+  emits: ['tryEmit'],
 }
 </script>
 <style scoped>
@@ -73,7 +87,7 @@ export default {
     text-align: right;
   }
 }
-.linear-layout:hover .image img {
+.linear-layout .card:hover .image img {
   transform: scale(1.1);
 }
 .grid-layout .card {

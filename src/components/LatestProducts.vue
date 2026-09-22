@@ -1,22 +1,11 @@
 <template>
-  <section class="latest-products">
-    <div class="container">
-      <h2 className="main-title">Latest Products</h2>
-      <div class="cards">
-        <ProductCard
-          v-for="product in products.slice(0, 3)"
-          :key="product.id"
-          :image="product.image"
-          :title="product.title"
-          :price="product.price"
-        />
-      </div>
-    </div>
-  </section>
+  <ProductsSection :products="products.slice(0, 3)" className="latest-products">
+    <template #secTitle> <h2 className="main-title">Latest Products</h2></template>
+  </ProductsSection>
 </template>
 <script>
-import ProductCard from '@/components/ProductCard.vue'
 import { products } from '@/data/products'
+import ProductsSection from './ProductsSection.vue'
 export default {
   name: 'LatestProducts',
   data() {
@@ -24,10 +13,10 @@ export default {
       products,
     }
   },
-  components: { ProductCard },
+  components: { ProductsSection },
 }
 </script>
-<style scoped>
+<style>
 .latest-products .container {
   padding: 3rem 0px;
   .main-title {
@@ -39,15 +28,10 @@ export default {
     font-size: 30px;
     border-bottom: 1px solid #e2e8f4;
   }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-  }
 }
 @media (max-width: 400px) {
   .latest-products .container {
-    .cards {
+    .content {
       grid-template-columns: unset;
     }
   }
