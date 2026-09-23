@@ -33,4 +33,8 @@ const router = createRouter({
   ],
 })
 
+router.beforeEach((to, from) => {
+  document.title = 'Comfy- ' + to.meta.title
+})
+
 export default router
