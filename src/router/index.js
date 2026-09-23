@@ -33,7 +33,7 @@ const router = createRouter({
   ],
 })
 
-router.beforeEach((to, from) => {
+router.beforeEach((to) => {
   document.title = 'Comfy- ' + to.meta.title
 })
 

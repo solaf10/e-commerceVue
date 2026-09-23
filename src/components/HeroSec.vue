@@ -7,7 +7,7 @@
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim
           soluta temporibus asperiores aut obcaecati perferendis porro nobis
         </p>
-        <button class="btn" @click="console.log(12)">Our Products</button>
+        <button class="btn" @click="$router.push({ name: 'products' })">Our Products</button>
       </div>
       <div class="image">
         <img src="/public/images/products/hero.webp" alt="" />
