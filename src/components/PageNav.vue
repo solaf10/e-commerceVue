@@ -3,7 +3,7 @@
     <div class="container">
       <div class="logo">C</div>
       <ul class="links">
-        <li v-for="link in $router.options.routes" :key="link.name">
+        <li v-for="link in routes" :key="link.name">
           <router-link class="link" :to="{ name: link.name }">{{ link.meta.title }}</router-link>
         </li>
       </ul>
@@ -14,6 +14,11 @@
 <script>
 export default {
   name: 'PageNav',
+  computed: {
+    routes() {
+      return this.$router.options.routes.filter((route) => route.name !== 'product')
+    },
+  },
 }
 </script>
 

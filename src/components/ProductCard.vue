@@ -1,17 +1,21 @@
 <template>
-  <div className="card" key="{id}" @click="$emit('tryEmit', title)">
-    <div className="image">
+  <div class="card" @click="$router.push({ name: 'product', params: { id }, query: { title } })">
+    <div class="image">
       <img :src="image" :alt="title" />
     </div>
-    <div className="content">
+    <div class="content">
       <h4>{{ title }}</h4>
-      <p className="price">${{ price }}</p>
+      <p class="price">${{ price }}</p>
     </div>
   </div>
 </template>
 <script>
 export default {
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     title: {
       type: String,
       required: true,

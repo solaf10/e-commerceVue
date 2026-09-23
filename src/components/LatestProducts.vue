@@ -1,6 +1,6 @@
 <template>
   <ProductsSection :products="products.slice(0, 3)" className="latest-products">
-    <template #secTitle> <h2 className="main-title">Latest Products</h2></template>
+    <template #secTitle> <h2 class="main-title">Latest Products</h2></template>
   </ProductsSection>
 </template>
 <script>

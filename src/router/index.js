@@ -1,6 +1,7 @@
 import AboutPage from '@/views/AboutPage.vue'
 import HomePage from '@/views/HomePage.vue'
 import ProductsPage from '@/views/ProductsPage.vue'
+import SingleProduct from '@/views/SingleProduct.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -30,11 +31,17 @@ const router = createRouter({
         title: 'Products',
       },
     },
+    {
+      name: 'product',
+      path: '/products/:id',
+      component: SingleProduct,
+    },
   ],
 })
 
 router.beforeEach((to) => {
-  document.title = 'Comfy- ' + to.meta.title
+  if (to.name === 'product') document.title = 'Comfy- ' + to.query.title
+  else document.title = 'Comfy- ' + to.meta.title
 })
 
 export default router

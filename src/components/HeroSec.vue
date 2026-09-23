@@ -1,7 +1,7 @@
 <template>
   <section class="hero">
     <div class="container">
-      <div className="content">
+      <div class="content">
         <h1>We are changing the way people shop</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim
