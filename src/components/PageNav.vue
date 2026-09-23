@@ -3,8 +3,8 @@
     <div class="container">
       <div class="logo">C</div>
       <ul class="links">
-        <li v-for="link in links" :key="link.id">
-          <router-link class="link" :to="link.path">{{ link.title }}</router-link>
+        <li v-for="link in $router.options.routes" :key="link.name">
+          <router-link class="link" :to="{ name: link.name }">{{ link.meta.title }}</router-link>
         </li>
       </ul>
     </div>
@@ -14,27 +14,6 @@
 <script>
 export default {
   name: 'PageNav',
-  data() {
-    return {
-      links: [
-        {
-          id: 1,
-          path: '/',
-          title: 'Home',
-        },
-        {
-          id: 2,
-          path: '/about',
-          title: 'About',
-        },
-        {
-          id: 3,
-          path: '/products',
-          title: 'Products',
-        },
-      ],
-    }
-  },
 }
 </script>
 

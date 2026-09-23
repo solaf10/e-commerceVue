@@ -6,9 +6,30 @@ import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { name: 'home', path: '/', component: HomePage },
-    { name: 'about', path: '/about', component: AboutPage },
-    { name: 'products', path: '/products', component: ProductsPage },
+    {
+      name: 'home',
+      path: '/',
+      component: HomePage,
+      meta: {
+        title: 'Home',
+      },
+    },
+    {
+      name: 'about',
+      path: '/about',
+      component: AboutPage,
+      meta: {
+        title: 'About',
+      },
+    },
+    {
+      name: 'products',
+      path: '/products',
+      component: ProductsPage,
+      meta: {
+        title: 'Products',
+      },
+    },
   ],
 })
 
