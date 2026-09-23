@@ -3,7 +3,9 @@
     <div class="container">
       <div class="logo">C</div>
       <ul class="links">
-        <li v-for="link in links" :key="link.id" class="link">{{ link.title }}</li>
+        <li v-for="link in links" :key="link.id">
+          <router-link class="link" :to="link.path">{{ link.title }}</router-link>
+        </li>
       </ul>
     </div>
   </nav>
@@ -56,8 +58,13 @@ nav {
         color: inherit;
         transition: 0.3s;
         cursor: pointer;
+        text-decoration: none;
       }
-      .link:hover {
+      .router-link-exact-active {
+        color: white;
+        background-color: var(--main-bg-bright);
+      }
+      .link:not(.router-link-exact-active):hover {
         background-color: #dee5f0;
       }
     }
