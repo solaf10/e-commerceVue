@@ -7,13 +7,38 @@ export default {
     PageHeader,
     PageNav,
   },
+  data() {
+    return {
+      isDark: localStorage.getItem('theme') === 'dark',
+    }
+  },
+  emits: ['theme'],
+  watch: {
+    isDark(newVal) {
+      console.log(newVal)
+    },
+  },
+  methods: {
+    changeTheme() {
+      this.isDark = !this.isDark
+      const theme = this.isDark ? 'dark' : 'light'
+      localStorage.setItem('theme', theme)
+    },
+  },
 }
 </script>
 
 <template>
-  <PageHeader />
-  <PageNav />
-  <router-view />
+  <div :class="`app ${isDark ? 'dark' : 'light'}`">
+    <PageHeader />
+    <PageNav :isDark="isDark" @theme="changeTheme" />
+    <router-view />
+  </div>
 </template>
 
-<style scoped></style>
+<style>
+.dark {
+  color: white;
+  background-color: var(--main-bg-dark);
+}
+</style>

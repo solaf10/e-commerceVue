@@ -2,7 +2,7 @@
   <KeepAlive>
     <ProductsFilter @updateProducts="($event) => onUpdateProducts($event)" />
   </KeepAlive>
-  <ProductsSection :products="products" :isLinear="isLinear">
+  <ProductsSection :isLinear="isLinear">
     <template #secTitle>
       <div class="info" style="margin-bottom: 3rem">
         <p>{{ products.length }} Products</p>
@@ -42,6 +42,11 @@ export default {
       this.products = filteredProducts
       console.log(filteredProducts)
     },
+  },
+  provide() {
+    return {
+      products,
+    }
   },
 }
 </script>

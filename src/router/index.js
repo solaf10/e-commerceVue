@@ -1,5 +1,6 @@
 import AboutPage from '@/views/AboutPage.vue'
 import HomePage from '@/views/HomePage.vue'
+import NotFound from '@/views/NotFound.vue'
 import ProductsPage from '@/views/ProductsPage.vue'
 import SingleProduct from '@/views/SingleProduct.vue'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -35,6 +36,11 @@ const router = createRouter({
       name: 'product',
       path: '/products/:id',
       component: SingleProduct,
+    },
+    {
+      name: 'not-found',
+      path: '/:pathMatch(.*)*',
+      component: NotFound,
     },
   ],
 })

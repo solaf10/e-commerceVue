@@ -42,6 +42,11 @@ header {
     }
   }
 }
+.dark {
+  header {
+    background-color: #414558;
+  }
+}
 @media (max-width: 400px) {
   header .contact p {
     font-size: 14px;

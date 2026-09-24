@@ -67,6 +67,16 @@ export default {
     }
   }
 }
+.dark {
+  .hero .container {
+    .image {
+      background-color: #414558;
+    }
+    .content {
+      color: white;
+    }
+  }
+}
 @media (max-width: 992px) {
   .hero .container {
     padding-top: 64px;

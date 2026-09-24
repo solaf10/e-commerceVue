@@ -16,7 +16,7 @@
 </template>
 <style>
 .about {
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) + 1px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +39,17 @@
     text-align: center;
     line-height: 2rem;
     font-size: 18px;
+  }
+}
+
+.dark {
+  .about {
+    color: white;
+    h2 {
+      span {
+        background-color: var(--main-color-dark);
+      }
+    }
   }
 }
 

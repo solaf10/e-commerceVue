@@ -177,6 +177,17 @@ export default {
     }
   }
 }
+.dark {
+  .single-product {
+    .product-title {
+      color: white;
+    }
+    .content {
+      color: white;
+    }
+  }
+}
+
 @media (max-width: 991px) {
   .single-product {
     .content {

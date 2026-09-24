@@ -49,6 +49,17 @@ ul {
   outline-color: var(--secondary-color-bright);
   background-color: var(--secondary-color-bright);
 }
+.dark {
+  .btn {
+    color: #333;
+    outline-color: var(--main-color-dark);
+    background-color: var(--main-color-dark);
+  }
+  .btn:hover {
+    outline-color: #ff57b6;
+    background-color: #ff57b6;
+  }
+}
 /* Small Screens */
 @media (min-width: 768px) {
   .container {

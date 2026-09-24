@@ -25,9 +25,6 @@ import ProductCard from '@/components/ProductCard.vue'
 export default {
   name: 'ProductsSection',
   props: {
-    products: {
-      type: Array,
-    },
     isLinear: {
       type: Boolean,
     },
@@ -38,11 +35,12 @@ export default {
   components: {
     ProductCard,
   },
+  inject: ['products'],
 }
 </script>
 <style>
 .products {
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 .products .info {
   margin-top: 3rem;
@@ -86,5 +84,24 @@ export default {
 .products .content {
   display: grid;
   gap: 16px;
+}
+.dark {
+  .products select::placeholder,
+  .products input::placeholder {
+    color: white;
+  }
+  .products .filter-area > div:not(.control) input,
+  .products .filter-area > div:not(.control) select {
+    color: white;
+    border-color: #394e6a33;
+    background-color: #272935;
+  }
+  .products .filter-area .price label,
+  .products .filter-area .price .limits {
+    color: white;
+  }
+  .products .infos .layout-controllers button.selected {
+    background-color: var(--main-color-dark);
+  }
 }
 </style>

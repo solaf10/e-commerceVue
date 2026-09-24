@@ -1,5 +1,5 @@
 <template>
-  <ProductsSection :products="products.slice(0, 3)" className="latest-products">
+  <ProductsSection className="latest-products">
     <template #secTitle> <h2 class="main-title">Latest Products</h2></template>
   </ProductsSection>
 </template>
@@ -8,9 +8,9 @@ import { products } from '@/data/products'
 import ProductsSection from './ProductsSection.vue'
 export default {
   name: 'LatestProducts',
-  data() {
+  provide() {
     return {
-      products,
+      products: products.slice(0, 3),
     }
   },
   components: { ProductsSection },

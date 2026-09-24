@@ -132,6 +132,27 @@ export default {
   text-align: left;
 }
 
+.dark {
+  .filter-area {
+    background-color: var(--secondary-bg-dark);
+    > div:not(.control) {
+      input {
+        color: white;
+        border-color: white;
+        background-color: var(--secondary-bg-dark);
+      }
+      select {
+        color: white;
+        border-color: white;
+        background-color: var(--secondary-bg-dark);
+      }
+      .limits {
+        color: white;
+      }
+    }
+  }
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   .filter-area {
